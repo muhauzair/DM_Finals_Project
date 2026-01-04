@@ -10,9 +10,15 @@ bool exists(int arr[], int size, int val){
 }
 int main(){
     int totalSets;
-    cout<<"*********************************************"<<endl;
-    cout<<"*   MULTI-SET DISCRETE MATHS SET OPERATOR   *"<<endl;
-    cout<<"*********************************************"<<endl;
+    cout<<"********************************************************************************************************"<<endl;
+    
+    cout << "@@@@@@  @@@@@@  @@@@@@     @@@@@@  @@@@@@  @@@@@@  @@@@@@  @@@@@@  @@@@@@  @@@@@@  @@@@@@  @@@@    @@" <<endl;
+    cout << "@@      @@        @@       @@  @@  @@  @@  @@      @@  @@  @@  @@    @@      @@    @@  @@  @@ @@   @@" <<endl;
+    cout << "@@@@@@  @@@@      @@       @@  @@  @@@@@@  @@@@    @@@@@@  @@@@@@    @@      @@    @@  @@  @@  @@  @@" <<endl;
+    cout << "    @@  @@        @@       @@  @@  @@      @@      @@@@    @@  @@    @@      @@    @@  @@  @@   @@ @@" <<endl;
+    cout << "@@@@@@  @@@@@@    @@       @@@@@@  @@      @@@@@@  @@  @@  @@  @@    @@    @@@@@@  @@@@@@  @@    @@@@" <<endl;
+    cout << "\n                                   --- VISUALIZER ---                                              " <<endl;
+    cout<<"********************************************************************************************************"<<endl;
     cout<<"This program only deal with at most 3 sets.";
     cout<<"Enter number of sets: ";
     cin>>totalSets;
@@ -39,6 +45,8 @@ int main(){
         int s1, s2;
         switch (choice){
             case 1:{
+                cout << "\n--- [ UNION OPERATION ] ---" << endl;
+                cout << "Definition: The Union of two setscontains all elements from both sets,\nwithout duplicating shared elements." << endl;
                 if(totalSets==1){
                     cout<<"Union is not possible. Please enter at least 2 sets. "<<endl;
                     break;
@@ -66,6 +74,8 @@ int main(){
                 }
             }
             case 2:{
+                cout<<"              ---[Intersection]---           "<<endl;
+                cout<<"The Intersection of two sets set A and set B \n is a set that contains only the elements that are \n common to both sets. If an element is in $A$ but \n not in $B$, it will not be included."<<endl;
                 if(totalSets==1){
                     cout<<"Intersection is not possible. Please enter at least 2 sets. "<<endl;
                     break;
@@ -89,6 +99,8 @@ int main(){
                 }
             }
             case 3:{
+                cout<<"                  ---[Difference]---               "<<endl;
+                cout<<"The Difference of two sets A and B (written as A - B)\n is the set of elements that belong to $A$ but do not belong \n to B. Think of it as Set A minus everything it shares with B."<<endl;
                 if(totalSets==1){
                     cout<<"Differnce isn't possible. Please enter at least 2 sets. "<<endl;
                     break;
@@ -111,6 +123,8 @@ int main(){
                 }
             }
             case 4:{
+                cout<<"                  ---[Power Set]---               "<<endl;
+                cout<<"A Power Set is a set that contains all possible subsets of a given set A, including the Empty Set and the set itself"<<endl;
                  if(totalSets==1||totalSets==2||totalSets==3){
                 cout<<"Enter set number for POWER SET (e.g. 3): ";
                 cin>>s1;
@@ -132,7 +146,22 @@ int main(){
                     break;
                 }
             }
-            case 5:{   
+            case 5:{
+                cout<<"              ---[Venn diagram]---           "<<endl;
+                cout << "          _ _ _ _          " << endl;
+                cout<<"          SET A               SET B"<<endl;
+                cout<<"              _ _ _ _               _ _ _ _"<<endl;
+                cout<<"            /        \\            /        \\"<<endl;
+                cout<<"           /          \\  _ _ _  /           \\"<<endl;
+                cout<<"          |             /      \\             |"<<endl;
+                cout<<"          |            | Overlap|             |"<<endl;
+                cout<<"          \\            \\ _ _ _  /           /"<<endl;
+                cout<<"           \\ _ _ _ _ /          \\ _ _ _ _ /"<<endl;
+
+                cout<<"A Venn Diagram is a visual way to represent sets and their relationships. It usually uses circles to show sets."<<endl;
+                cout<<"1. Overlapping circles show that sets share elements (Intersection).";
+                cout<<"2. Separated circles show Disjoint sets (no common elements)."<<endl;
+                cout<<"3. A circle inside another circle shows a Subset."<<endl;  
                 if(totalSets == 1){
                     cout << "Only in A: { ";
                     for(int i = 0; i < setSizes[s1]; i++)
